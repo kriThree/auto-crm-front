@@ -1,4 +1,4 @@
-import { paths } from '../../config/paths'
+import { routerPaths } from '../../../config/routerPaths'
 import React from 'react'
 import SidebarItem from './SidebarItem'
 import { useLocation } from 'react-router-dom'
@@ -11,17 +11,17 @@ export interface SidebarLink {
 
 const sideBarLinks: SidebarLink[] = [
     {
-        to: paths.home.from,
+        to: routerPaths.home.from,
         name: "Home",
         image: "/house.svg"
     },
     {
-        to: paths.autoservices.from,
+        to: routerPaths.autoservices.from,
         name: "Autoservices",
         image: "/city.svg"
     },
     {
-        to: paths.cars.from,
+        to: routerPaths.cars.from,
         name: "Cars",
         image: "/car.svg"
     }
@@ -36,7 +36,7 @@ const Sidebar = (props: SidebarProps) => {
     return (
         <div
             {...props}
-            className={'border-r-2 bord border-black p-5 flex flex-col justify-between ' + props.className}
+            className={'border-r-2 border-black p-5 flex flex-col justify-between ' + props.className}
         >
             <div className='flex flex-col'>
                 {sideBarLinks.map((link, index) => (
@@ -48,8 +48,8 @@ const Sidebar = (props: SidebarProps) => {
             </div>
             <SidebarItem
                 className='mb-0'
-                link={{ to: paths.settings.to, name: "Settings", image: "/gear.svg" }}
-                isSelect={location.pathname === paths.settings.from}
+                link={{ to: routerPaths.settings.to, name: "Settings", image: "/gear.svg" }}
+                isSelect={location.pathname === routerPaths.settings.from}
             />
         </div>
     )
