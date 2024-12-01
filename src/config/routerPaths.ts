@@ -4,10 +4,10 @@ type Path = {
     to: string
 }
 
-export const paths: { [key: string]: Path } = {
+export const routerPaths: { [key: string]: Path } = {
     login: {
-        from: '/login',
-        to: '/login'
+        from: '/',
+        to: '/'
     },
     register: {
         from: '/register',

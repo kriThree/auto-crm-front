@@ -1,4 +1,4 @@
-import Wrapper from "../../wrapper/Wrapper"
+import Wrapper from "../../shared/ui/wrapper/Wrapper"
 
 export const Autoservices = () => {
     return (
